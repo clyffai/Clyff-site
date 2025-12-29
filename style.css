@@ -1,12 +1,10 @@
 /* =========================
-   CLYFF — FINAL PRODUCTION CSS
-   Calm. Confident. Quiet Genius.
+   CLYFF — ELEVATED SYSTEM CSS
+   Authority • Warmth • Clarity
 ========================= */
 
-/* ---------- Reset ---------- */
-* {
-  box-sizing: border-box;
-}
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -15,130 +13,157 @@ html, body {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #0b1f33;
   background: #f8f6f2;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 /* ---------- Layout ---------- */
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .section {
-  padding: 64px 0;
-  text-align: center;
+  padding: 96px 0;
 }
 
-.section + .section {
-  border-top: 1px solid rgba(11,31,51,0.06);
+/* ---------- Section Roles ---------- */
+
+.section-hero {
+  background: #0b1f33;
+  color: #ffffff;
+  padding: 140px 0 120px;
+}
+
+.section-hero h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.section-hero p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.1rem;
+  max-width: 720px;
+}
+
+.kicker {
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.section-editorial {
+  background: #ffffff;
+}
+
+.section-process {
+  background: #f8f6f2;
 }
 
 /* ---------- Typography ---------- */
 
 h1, h2, h3 {
-  font-weight: 600;
-  letter-spacing: -0.015em;
   margin: 0 0 16px;
-}
-
-h1 {
-  font-size: 2.6rem;
+  letter-spacing: -0.015em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 p {
-  max-width: 720px;
   margin: 0 auto 20px;
-  color: rgba(11,31,51,0.85);
+  max-width: 760px;
+  color: rgba(11,31,51,0.8);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* ---------- Audience / Editorial ---------- */
 
-/* ---------- Buttons ---------- */
-
-.button {
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 999px;
-  background: #0b1f33;
-  color: #ffffff;
-  font-weight: 600;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(11,31,51,0.15);
-}
-
-/* ---------- Feature Grid ---------- */
-
-.grid {
+.editorial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 56px;
+  margin-top: 72px;
+}
+
+.editorial-item {
+  text-align: center;
+}
+
+/* ---------- Process (How it works) ---------- */
+
+.process {
+  margin-top: 72px;
+  position: relative;
+}
+
+.process::before {
+  content: "";
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(11,31,51,0.08);
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
   gap: 32px;
-  margin-top: 48px;
+  padding: 32px 0;
 }
 
-.card {
-  background: #ffffff;
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(11,31,51,0.08);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+.process-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #0b1f33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: #f8f6f2;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(11,31,51,0.12);
+/* ---------- Mascots ---------- */
+
+.mascot-section {
+  text-align: center;
 }
 
-/* ---------- Hero ---------- */
-
-.hero {
-  padding: 96px 0;
+.mascot-row {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  opacity: 0.75;
 }
 
-.hero p {
-  font-size: 1.15rem;
-}
-
-/* ---------- Footer ---------- */
-
-.footer {
-  padding: 48px 0;
-  font-size: 0.9rem;
-  color: rgba(11,31,51,0.6);
+.mascot-row img {
+  height: 80px;
 }
 
 /* ---------- Responsive ---------- */
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
   .section {
-    padding: 48px 0;
+    padding: 72px 0;
+  }
+
+  .section-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .process {
+    padding-left: 24px;
   }
 }
