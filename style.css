@@ -1,10 +1,11 @@
 /* =========================
-   CLYFF — ELEVATED SYSTEM CSS
-   Authority • Warmth • Clarity
+   CLYFF — QUIET GENIUS SYSTEM
+   Confident • Editorial • Human
 ========================= */
 
-/* ---------- Base ---------- */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
@@ -20,33 +21,23 @@ body {
 }
 
 /* ---------- Layout ---------- */
+
 .container {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .section {
-  padding: 96px 0;
+  padding: 104px 0;
 }
 
-/* ---------- Section Roles ---------- */
+/* ---------- Hero ---------- */
 
-.section-hero {
+.hero {
   background: #0b1f33;
   color: #ffffff;
   padding: 140px 0 120px;
-}
-
-.section-hero h1 {
-  font-size: 3rem;
-  letter-spacing: -0.02em;
-}
-
-.section-hero p {
-  color: rgba(255,255,255,0.85);
-  font-size: 1.1rem;
-  max-width: 720px;
 }
 
 .kicker {
@@ -55,50 +46,79 @@ body {
   margin-bottom: 20px;
 }
 
-.section-editorial {
-  background: #ffffff;
+.hero h1 {
+  font-size: 3.1rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
 }
 
-.section-process {
-  background: #f8f6f2;
+.hero-copy {
+  font-size: 1.15rem;
+  max-width: 760px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0b1f33;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
 }
 
 /* ---------- Typography ---------- */
 
-h1, h2, h3 {
-  margin: 0 0 16px;
-  letter-spacing: -0.015em;
-}
-
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  letter-spacing: -0.015em;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
 }
 
 p {
-  margin: 0 auto 20px;
   max-width: 760px;
+  margin: 0 auto 20px;
   color: rgba(11,31,51,0.8);
 }
 
-/* ---------- Audience / Editorial ---------- */
+.section-intro {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* ---------- Editorial ---------- */
+
+.editorial {
+  background: #ffffff;
+}
 
 .editorial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 56px;
   margin-top: 72px;
-}
-
-.editorial-item {
   text-align: center;
 }
 
-/* ---------- Process (How it works) ---------- */
+/* ---------- Process ---------- */
+
+.process-section {
+  background: #f8f6f2;
+}
 
 .process {
   margin-top: 72px;
@@ -134,22 +154,20 @@ p {
   background: #f8f6f2;
 }
 
-/* ---------- Mascots ---------- */
+/* ---------- Value ---------- */
 
-.mascot-section {
+.value {
+  background: #ffffff;
   text-align: center;
 }
 
-.mascot-row {
-  margin-top: 64px;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  opacity: 0.75;
-}
+/* ---------- Footer ---------- */
 
-.mascot-row img {
-  height: 80px;
+.footer {
+  padding: 48px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(11,31,51,0.6);
 }
 
 /* ---------- Responsive ---------- */
@@ -159,8 +177,8 @@ p {
     padding: 72px 0;
   }
 
-  .section-hero h1 {
-    font-size: 2.3rem;
+  .hero h1 {
+    font-size: 2.4rem;
   }
 
   .process {
