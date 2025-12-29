@@ -1,8 +1,9 @@
 /* =========================
-   CLYFF — QUIET GENIUS SYSTEM
-   Confident • Editorial • Human
+   CLYFF — STABLE ELEVATED CSS
+   Defensive, readable, calm
 ========================= */
 
+/* --- Reset (safe) --- */
 * {
   box-sizing: border-box;
 }
@@ -12,6 +13,7 @@ html, body {
   padding: 0;
 }
 
+/* --- Base --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.65;
@@ -20,168 +22,113 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---------- Layout ---------- */
-
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
+/* --- Generic structure (no assumptions) --- */
+section {
+  padding: 80px 24px;
 }
 
-.section {
-  padding: 104px 0;
-}
-
-/* ---------- Hero ---------- */
-
-.hero {
-  background: #0b1f33;
-  color: #ffffff;
-  padding: 140px 0 120px;
-}
-
-.kicker {
-  color: #d4af37;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 3.1rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-}
-
-.hero-copy {
-  font-size: 1.15rem;
-  max-width: 760px;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 40px;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 16px 36px;
-  border-radius: 999px;
+section:nth-of-type(odd) {
   background: #ffffff;
-  color: #0b1f33;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.cta-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+section:nth-of-type(even) {
+  background: #f8f6f2;
 }
 
-/* ---------- Typography ---------- */
+/* --- Headings --- */
+h1, h2, h3 {
+  margin: 0 0 16px;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  max-width: 900px;
+}
 
 h2 {
-  font-size: 2.4rem;
-  letter-spacing: -0.015em;
-  text-align: center;
-  margin-bottom: 24px;
+  font-size: 2.1rem;
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
+}
+
+/* --- Paragraphs --- */
+p {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: rgba(11,31,51,0.85);
+}
+
+/* --- Links --- */
+a {
+  color: #0b1f33;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* --- CTA links (even if class missing) --- */
+a[href*="typeform"],
+a.cta,
+a.button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: #0b1f33;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a[href*="typeform"]:hover,
+a.cta:hover,
+a.button:hover {
+  background: #081627;
+}
+
+/* --- Lists / steps --- */
+ol, ul {
+  padding-left: 24px;
+}
+
+li {
   margin-bottom: 12px;
 }
 
-p {
-  max-width: 760px;
-  margin: 0 auto 20px;
-  color: rgba(11,31,51,0.8);
+/* --- Numbers (How it works) --- */
+strong {
+  font-weight: 600;
 }
 
-.section-intro {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-/* ---------- Editorial ---------- */
-
-.editorial {
-  background: #ffffff;
-}
-
-.editorial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 56px;
-  margin-top: 72px;
-  text-align: center;
-}
-
-/* ---------- Process ---------- */
-
-.process-section {
-  background: #f8f6f2;
-}
-
-.process {
-  margin-top: 72px;
-  position: relative;
-}
-
-.process::before {
-  content: "";
-  position: absolute;
-  left: 36px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: rgba(11,31,51,0.08);
-}
-
-.process-step {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 32px;
-  padding: 32px 0;
-}
-
-.process-number {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 2px solid #0b1f33;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  background: #f8f6f2;
-}
-
-/* ---------- Value ---------- */
-
-.value {
-  background: #ffffff;
-  text-align: center;
-}
-
-/* ---------- Footer ---------- */
-
-.footer {
-  padding: 48px 0;
+/* --- Footer --- */
+footer {
+  padding: 48px 24px;
   text-align: center;
   font-size: 0.9rem;
   color: rgba(11,31,51,0.6);
+  background: #ffffff;
 }
 
-/* ---------- Responsive ---------- */
+/* --- NEVER hide content --- */
+[hidden],
+[style*="display:none"],
+[style*="visibility:hidden"] {
+  display: block !important;
+  visibility: visible !important;
+}
 
+/* --- Responsive --- */
 @media (max-width: 768px) {
-  .section {
-    padding: 72px 0;
+  h1 {
+    font-size: 2.2rem;
   }
 
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .process {
-    padding-left: 24px;
+  section {
+    padding: 64px 20px;
   }
 }
